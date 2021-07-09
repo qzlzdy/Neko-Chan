@@ -7,8 +7,10 @@ function ReceiveFriendMsg(CurrentQQ, data)
 	return 1
 end
 function ReceiveGroupMsg(CurrentQQ, data)
-	if data.MsgType == 'TextMsg' and data.Content == '来点黄色' then
-		os.execute('python /home/pi/qqbot/PythonPlugins/Setu.py ' .. data.fromGroupId)
+	if data.MsgType == 'TextMsg' and string.find(data.Content, '来点黄色') == 1 then
+		keyword = data.Content:gsub('来点黄色 ', '')
+		keyword = keyword:gsub(' ', '')
+		os.execute('python /home/pi/qqbot/PythonPlugins/Setu.py ' .. data.fromGroupId .. ' ' .. keyword)
 		return 2
 	end
 	return 1
