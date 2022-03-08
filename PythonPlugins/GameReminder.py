@@ -17,7 +17,7 @@ data = {
     'toUser': 419286376,
     'sendToType': 1,
     'sendMsgType': 'TextMsg',
-    'content': '今天你白嫖了吗',
+    'content': '今天你打卡了吗',
     'groupid': 0,
     'atUser': 0
 }
