@@ -36,7 +36,7 @@ data = {
 }
 
 def sendSetu():
-    num = random.randint(20001, 37700)
+    num = random.randint(32001, 48000)
     inFile = open('/home/pi/qqbot/Assets/setu/H{}.jpg'.format(num), 'rb').read()
     buf = base64.b64encode(inFile)
     data['content'] = str(num)
